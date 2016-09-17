@@ -1,0 +1,198 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Agency overview</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+
+  <style>
+    .container {
+      font-family: 'PT Sans', sans-serif;
+    }
+
+    .agency-report {
+      margin-top: 2em;
+    }
+
+    .location-stats {
+      margin-bottom: 2em;
+      margin-top: 0.25em;
+    }
+
+    .location-change-count {
+      font-size: 1.4em;
+    }
+
+    .location-stats .arrow-up {
+      background: url('up-arrow.png') right center no-repeat;
+      padding-right: 1em;
+      background-size: 0.8em 0.8em;
+    }
+
+    .location-stats .arrow-down {
+      background: url('down-arrow.png') left center no-repeat;
+      padding-left: 1em;
+      background-size: 0.8em 0.8em;
+    }
+
+    .location-count {
+      font-size: 2.5em;
+      font-weight: bold;
+      line-height: 1em;
+    }
+
+    .state-statistic-group {
+      margin-bottom: 0.75em;
+    }
+
+    .state-statistic {
+      font-size: 1.5em;
+      text-align: right;
+      font-weight: bold;
+      color: #444;
+    }
+    .state-statistic-label {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .state-category-statistic {
+      text-align: right;
+      color: #888;
+    }
+    .state-category-statistic-label {
+      color: #555;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container agency-report">
+    <div class="row">
+
+      <!-- left col: numbers -->
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-md-4 text-right">
+            <img src="synup-location-logo.png"/>
+          </div>
+          <div class="col-md-8 location-stats">
+            <div class="row">
+              <div class="col-md-12 location-count">
+                <%= @total_localities %>
+              </div>
+
+              <div class="col-md-12 location-change-count">
+                <span class="arrow arrow-up"><%= @last_month_locations_added %></span>
+                <span class="arrow arrow-down"><%= @last_month_locations_deleted %></span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-md-12 state-statistic-group">
+            <div class="row">
+              <div class="col-md-4 state-statistic">
+                68%
+              </div>
+              <div class="col-md-8 state-statistic-label">
+                Texas
+              </div>
+
+              <div class="col-md-4 state-category-statistic">
+                86%
+              </div>
+              <div class="col-md-8 state-category-statistic-label">
+                Restaurants
+              </div>
+
+              <div class="col-md-4 state-category-statistic">
+                86%
+              </div>
+              <div class="col-md-8 state-category-statistic-label">
+                Clubs
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-12 state-statistic-group">
+            <div class="row">
+              <div class="col-md-4 state-statistic">
+                24%
+              </div>
+              <div class="col-md-8 state-statistic-label">
+                Arizona
+              </div>
+
+              <div class="col-md-4 state-category-statistic">
+                86%
+              </div>
+              <div class="col-md-8 state-category-statistic-label">
+                Restaurants
+              </div>
+
+              <div class="col-md-4 state-category-statistic">
+                86%
+              </div>
+              <div class="col-md-8 state-category-statistic-label">
+                Clubs
+              </div>              
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-12 state-statistic-group">
+            <div class="row">
+              <div class="col-md-4 state-statistic">
+                8%
+              </div>
+              <div class="col-md-8 state-statistic-label">
+                Oregon
+              </div>
+
+              <div class="col-md-4 state-category-statistic">
+                86%
+              </div>
+              <div class="col-md-8 state-category-statistic-label">
+                Restaurants
+              </div>
+
+              <div class="col-md-4 state-category-statistic">
+                86%
+              </div>
+              <div class="col-md-8 state-category-statistic-label">
+                Clubs
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- right col: map -->
+      <div class="col-md-4">
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
